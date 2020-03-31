@@ -70,14 +70,10 @@ export default function Profile() {
 
             <strong>VALOR:</strong>
             <p>
-              {Intl
-                .NumberFormat(
-                  'pt-BR', 
-                  { 
-                    style: 'currency', 
-                    currency: 'BRL' 
-                  })
-                .format(incident.value)}
+              {Intl.NumberFormat('pt-BR', { 
+                style: 'currency', 
+                currency: 'BRL' 
+              }).format(incident.value)}
             </p>
 
             <button type="button" onClick={() => handleDeleteIncident(incident.id)}>
